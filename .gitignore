@@ -1,0 +1,42 @@
+# user-specific
+*.sqlite3
+db/*.sqlite3
+log/*.log
+
+# tmp
+tmp/
+.sass-cache/
+npm-debug.log
+
+# cover_me generated
+coverage
+coverage.data
+
+# junk
+.DS_Store
+*~
+*#
+*flymake*
+
+
+# compiled files
+*.py[co]
+*.mo
+staticfiles/
+src/maps/static/build/
+src/maps/static/dist/
+
+# environment
+venv
+env/
+.env/
+.env
+node_modules/
+.idea
+
+# Local project settings
+local-cdn/
+
+
+# sqlite database
+*.db

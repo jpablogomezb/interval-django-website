@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block body_class %}template-homepage{% endblock %}
+{% block extra_css %}
+{#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#}
+{% include 'home/css.html' %}
+{% endblock extra_css %}
+{% block content %}
+{#{{ page.body|richtext }}#}
+    <!-- Wrapper -->
+<div id="wrapper">
+	<!-- Header -->
+	{% include 'pages/general/navbar.html' %}
+	<!-- Menu -->
+	{% include 'pages/general/menu.html' %}
+	<!-- Banner -->
+	<section id="banner" class="major">
+		<div class="inner">
+{#            <header class="major">#}
+{#				<!--<h1 style="text-align: center">INTERVAL</h1>-->#}
+{#				<img src="{% static 'logos/INTERVAL_logo_v2_white_lg.png' %}"#}
+{#					 alt="" style="height: 200px; opacity: 75%"/>#}
+{#			</header>#}
+			<div class="content">
+				<h1>An INTEgrated stReet tree
+					VALuation-based solution for minimizing the uneven street
+					tree distribution in Cities
+				</h1>
+			</div>
+		</div>
+	</section>
+    <!-- Main -->
+	<div id="main">
+		<!-- one -->
+		<section id="one" class="text-interval-green-dark spotlights
+		  pr-16 py-16 xm:pr-0">
+            <section style="background-color: white">
+                <div class="content bg-white">
+                    <div class="inner">
+                        <h2 class="text-interval-green-dark">Project concept:</h2>
+                        <p>INTERVAL is an INTEgrated stReet tree VALuation based
+                        solution for minimising the uneven street tree distribution
+                        in cities. This research aims to develop a decision support
+                        system to increase the street tree density in Dublin City
+                        to promote climate neutrality and minimise environmental
+                        injustice that originates due to the inequality of street
+                        tree distribution.
+                        </p>
+                        <ul class="actions">
+                            <li>
+                                <a href="#" class="button next">
+                                    Get to Know our project!
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 <div style="background-color: white" class="xl:mt-14 xl:m-10 lg:mt-20 lg:m-10 md:mt-20 md:m-10
+                 mt-0 m-6 hidden lg:block">
+                    <img src="{% static 'logos/INTERVAL_balance_v2_white.png' %}"
+                       alt="INTERVAL Logo" class="max-w-full max-h-full">
+                </div>
+            </section>
+        </section>
+
+		<!-- Two -->
+		<section id="two" class="tiles">
+			<article>
+				<span class="image">
+					<img src="{% static '/images/park-people.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="" class="link">
+                        Engagement of local communities to co-create knowledge
+                        to increase awareness of ecosystem services
+						</a>
+                    </h3>
+					<p></p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="{% static '/images/stephens-green-1.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="" class="link">
+                        Data-driven street tree inventory: pilot case studies,
+                        quantitative methods, machine learning and deep learning tree density analysis
+						</a>
+					</h3>
+					<p></p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="{% static '/images/liffey-2.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="#" class="link">
+						Ecosystem services database provided by the most common
+						street tree species to present the vital role street trees play in the city</a>
+					</h3>
+					<p></p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="{% static '/images/liffey-1.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="#" class="link">
+						Prioritised areas identification that would benefit
+                        most from increased tree canopy coverage</a>
+					</h3>
+					<p></p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="{% static '/images/park.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="#" class="link">Project Team</a></h3>
+					<p></p>
+				</header>
+			</article>
+			<article>
+				<span class="image">
+					<img src="{% static '/images/scenic-view.jpg' %}" alt="" />
+				</span>
+				<header class="major">
+					<h3><a href="#" class="link">
+						Decision support platform co-design: an integrated
+                        web-based interface for spatial street tree ecosystem service analytics</a>
+					</h3>
+					<p></p>
+				</header>
+			</article>
+		</section>
+
+		<section id="three">
+			<div class="inner">
+				<blockquote style="text-align: center; color: #2D3320">
+					INTERVAL: Minimise environmental
+					injustice by addressing the unequal distribution of urban
+					street trees through community-driven scientific research
+					and assessing the value of ecosystem services.
+				</blockquote>
+			</div>
+		</section>
+	</div>
+    <!-- Logos -->
+	{% include 'pages/general/logos_section.html' %}
+	<!-- Contact -->
+	{% include 'pages/general/contact.html' %}
+	<!-- Footer -->
+	{% include 'pages/general/footer.html' %}
+</div>
+<!-- Scripts -->
+{% include 'home/js.html' %}
+
+{% endblock content %}

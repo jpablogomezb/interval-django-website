@@ -1,0 +1,6 @@
+Django
+django-environ
+pip-tools
+rav
+wagtail
+gunicorn
