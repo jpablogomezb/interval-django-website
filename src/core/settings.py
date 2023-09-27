@@ -110,7 +110,7 @@ if env.bool("POSTGRES"):
     print('DB: Postgres')
     DATABASES = {
         'default': {
-            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': env("POSTGRES_DB"),
             'USER': env("POSTGRES_USER"),
             'PASSWORD': env("POSTGRES_PASS"),
