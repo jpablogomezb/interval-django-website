@@ -9,16 +9,40 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
 from pathlib import Path
 
 # PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = Path(__file__).resolve().parent
+print(PROJECT_DIR)
+
 
 # BASE_DIR = os.path.dirname(PROJECT_DIR)
 BASE_DIR = Path(PROJECT_DIR).resolve().parent
+print(BASE_DIR)
+
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env.bool('DJANGO_DEBUG')
+
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["127.0.0.1"])
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env("SECRET_KEY")
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -85,13 +109,27 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+if env.bool("POSTGRES"):
+    print('postgres')
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'NAME': env("POSTGRES_DB"),
+            'USER': env("POSTGRES_USER"),
+            'PASSWORD': env("POSTGRES_PASS"),
+            'HOST': env("POSTGRES_HOST"),
+            'PORT': env("POSTGRES_PORT"),
+        }
+     }
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / 'db.sqlite3',
+else:
+    print('sqlite')
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR.parent / 'db.sqlite3',
+        }
     }
-}
 
 
 # Password validation
@@ -118,7 +156,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Dublin"
 
 USE_I18N = True
 
@@ -150,9 +188,9 @@ STATIC_URL = "/static/"
 MEDIA_ROOT = BASE_DIR.parent / "local-cdn" / "media"
 MEDIA_URL = "/media/"
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Wagtail settings
-
 WAGTAIL_SITE_NAME = "core"
 
 # Search
@@ -165,4 +203,4 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = "http://example.com"
+WAGTAILADMIN_BASE_URL = env("APP_DOMAIN")
