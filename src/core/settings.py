@@ -22,12 +22,9 @@ from pathlib import Path
 
 # PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).resolve().parent
-print(PROJECT_DIR)
-
 
 # BASE_DIR = os.path.dirname(PROJECT_DIR)
 BASE_DIR = Path(PROJECT_DIR).resolve().parent
-print(BASE_DIR)
 
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
@@ -110,7 +107,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if env.bool("POSTGRES"):
-    print('postgres')
+    print('DB: Postgres')
     DATABASES = {
         'default': {
             'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -123,7 +120,7 @@ if env.bool("POSTGRES"):
      }
 
 else:
-    print('sqlite')
+    print('DB: Sqlite')
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",

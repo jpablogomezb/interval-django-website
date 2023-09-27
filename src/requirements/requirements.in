@@ -3,4 +3,5 @@ django-environ
 pip-tools
 rav
 wagtail
+psycopg2-binary
 gunicorn

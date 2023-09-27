@@ -78,6 +78,8 @@ pillow-heif==0.13.0
     # via willow
 pip-tools==7.3.0
     # via -r src/requirements/requirements.in
+psycopg2-binary==2.9.7
+    # via -r src/requirements/requirements.in
 pygments==2.16.1
     # via rich
 pyproject-hooks==1.0.0
