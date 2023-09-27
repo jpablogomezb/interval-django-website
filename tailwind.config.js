@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'interval-green-dark': "#2D3320",
-        'interval-grenn-light': "#909E4F",
+        'interval-green-light': "#909E4F",
 
       }
     },

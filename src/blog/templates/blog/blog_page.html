@@ -1,12 +1,45 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
+{% load static %}
+<!-- Load the wagtailimages_tags: -->
+{% load wagtailcore_tags wagtailimages_tags %}
 {% block body_class %}template-blogpage{% endblock %}
+{% block extra_css %}
+{#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#}
+{% include 'home/css.html' %}
+{% endblock extra_css %}
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date }}</p>
-    <div class="intro">{{ page.intro }}</div>
-    {{ page.body|richtext }}
+<!-- Wrapper -->
+<div id="wrapper">
+<!-- Header -->
+	{% include 'pages/general/navbar.html' %}
+	<!-- Menu -->
+	{% include 'pages/general/menu.html' %}
+    <!-- Main -->
+    <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <header class="major">
+                    <h1>{{ page.title }}</h1>
+                </header>
+                <p class="meta">{{ page.date }} <br>
+                    {{ page.author }}
+                </p>
+                {% image page.gallery_images.all.0.image original as cover_photo %}
+                <span class="image main">
+                    <img src="{{ cover_photo.url }}" alt="{{ cover_photo.alt }}">
+                </span>
+
+                {{ page.body|richtext }}
+            </div>
+        </section>
+    </div>
     <p>
-        <a href="{{ page.get_parent.url }}">Return to our research updates</a>
+        <a class="button small primary" href="{{ page.get_parent.url }}">
+            Return to project updates
+        </a>
     </p>
-{% endblock %}
+</div>
+<!-- Scripts -->
+{% include 'home/js.html' %}
+{% endblock content %}

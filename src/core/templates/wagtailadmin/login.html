@@ -1,0 +1,11 @@
+{% extends "wagtailadmin/login.html" %}
+{% load static %}
+
+{% block branding_logo %}
+    <div  style="text-align: center; padding-top: 25px">
+    <img src="{% static 'logos/INTERVAL_logo_simple_white_2_md.png' %}"
+    alt="INTERVAL Project" width="222"/>
+    </div>
+{% endblock %}
+
+{% block branding_login %}Sign in to INTERVAL{% endblock %}
