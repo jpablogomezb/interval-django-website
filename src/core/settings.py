@@ -107,7 +107,6 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if env.bool("POSTGRES"):
-    print('DB: Postgres')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -120,7 +119,6 @@ if env.bool("POSTGRES"):
      }
 
 else:
-    print('DB: Sqlite')
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
