@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
 {% load static %}
 <!-- Load the wagtailimages_tags: -->
 {% load wagtailcore_tags wagtailimages_tags %}
 {% block body_class %}template-blogpage{% endblock %}
 {% block extra_css %}
 {#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#}
-{% include 'home/css.html' %}
+{% include 'blog/css.html' %}
 {% endblock extra_css %}
 {% block content %}
 <!-- Wrapper -->
@@ -85,7 +85,7 @@
         </section>
 
 <!-- Contact -->
-<section id="contact" class="bg-interval-green-light mt-10">
+<section id="contact" class="mt-10">
     <div class="inner">
             <section>
                 <section>
@@ -110,38 +110,38 @@
             </section>
 		</div>
 </section>
-<!-- Logos -->
-<section class="bg-interval-green-light"
-         style="border-bottom: solid 1px rgba(212, 212, 255, 0.1)">
-    <div class="p-16 px-6 grid grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">
-        <img class="max-h-20 w-full mt-12 object-contain md:col-span-1" src="https://logodix.com/logo/771750.png" alt="UCD">
-        <img class="max-h-32 w-full object-contain md:col-span-1 align-center text-center" src="{% static 'logos/INTERVAL_logo_v2_green.png' %}" alt="INTERVAL">
-        <img class="max-h-20 w-full mt-10 object-contain md:col-span-1" src="https://www.sfi.ie/site-files/cms-templates/img/sfi-logo.svg" alt="SFI">
-    </div>
-</section>
+{#<!-- Logos -->#}
+{#<section class="bg-white"#}
+{#         style="border-bottom: solid 1px rgba(212, 212, 255, 0.1)">#}
+{#    <div class="p-16 px-6 grid grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">#}
+{#        <img class="max-h-20 w-full mt-12 object-contain md:col-span-1" src="https://logodix.com/logo/771750.png" alt="UCD">#}
+{#        <img class="max-h-32 w-full object-contain md:col-span-1 align-center text-center" src="{% static 'logos/INTERVAL_logo_v2_white.png' %}" alt="INTERVAL">#}
+{#        <img class="max-h-20 w-full mt-10 object-contain md:col-span-1" src="https://www.sfi.ie/site-files/cms-templates/img/sfi-logo.svg" alt="SFI">#}
+{#    </div>#}
+{#</section>#}
 <!-- Footer -->
-<footer id="footer" class="bg-interval-green-light">
-    <div class="inner">
-        <ul class="icons">
-            <li>
-                <a href="" class="icon brands alt fa-twitter">
-                <span class="label">Twitter</span>
-                </a>
-            </li>
-            <li>
-                <a href="" class="icon brands alt fa-linkedin-in">
-                    <span class="label">LinkedIn</span>
-                </a>
-            </li>
-        </ul>
-        <ul class="copyright">
-            <li style="color: #2d3320">&copy; INTERVAL a SFI National Challenge Fund project</li>
-            <li style="color: #2d3320">Django integration by <a href="https://twitter.com/jpablogomezb">José P. Gomez</a>
-                based on a <a href="https://html5up.net">HTML5 UP</a> design</li>
-        </ul>
-    </div>
-</footer>
+{#<footer id="footer" class="bg-white">#}
+{#    <div class="inner">#}
+{#        <ul class="icons">#}
+{#            <li>#}
+{#                <a href="" class="icon brands alt fa-twitter">#}
+{#                <span class="label">Twitter</span>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="" class="icon brands alt fa-linkedin-in">#}
+{#                    <span class="label">LinkedIn</span>#}
+{#                </a>#}
+{#            </li>#}
+{#        </ul>#}
+{#        <ul class="copyright">#}
+{#            <li style="color: #2d3320">&copy; INTERVAL a SFI National Challenge Fund project</li>#}
+{#            <li style="color: #2d3320">Django integration by <a href="https://twitter.com/jpablogomezb">José P. Gomez</a>#}
+{#                based on a <a href="https://html5up.net">HTML5 UP</a> design</li>#}
+{#        </ul>#}
+{#    </div>#}
+{#</footer>#}
 </div>
 <!-- Scripts -->
-{% include 'home/js.html' %}
+{% include 'blog/js.html' %}
 {% endblock content %}
