@@ -10,7 +10,13 @@
 		<div id="fh5co-page">
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
-				<div class="container">
+				<div class="container" style="
+					height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+					">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
                         ><i></i>
@@ -19,7 +25,8 @@
                             <a href="/">
                                 <img class="2xl:w-72 xl:w-64 lg:w-64 md:w-60 w-44 opacity-90"
                                          src="{% static 'logos/IntervalLogo__Graphic_Circle_White.png' %}"
-                                         alt="INTERVAL logo" />
+                                         alt="INTERVAL logo" 
+										 style="width: 100px; height: 100px;"/>
                             </a>
                         </h1>
 
@@ -42,10 +49,10 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center px-16" data-stellar-background-ratio="0.5"
+			<div class="fh5co-cover text-center " data-stellar-background-ratio="0.5"
                  style="background-image: url(/static/images/small-road-trees.jpg);">
 				<div class="desc animate-box">
-					<h2>{{ page.header }}</h2>
+					<h2 class="fadeInUp animated">{{ page.header }}</h2>
 					<p>
 {#                        <a class="btn btn-primary btn-lg btn-learn" href="#">#}
 {#                            Learn More</a>#}
@@ -62,16 +69,16 @@
 			<div class="container">
 				<div class="partner-wrap">
 					<div class="wrap">
-						<div class="partner animate-box">
+						<!-- <div class="partner animate-box">
 							<div class="inner">
 								<img class="img-responsive"
                                      src="{% static 'logos/logo_fake_blank.png' %}" alt="">
 							</div>
-						</div>
+						</div> -->
 						<div class="partner animate-box">
 							<div class="inner">
-								<img class="img-responsive" style="width:4000px; height:100px;"
-                                     src="https://zeeko.ie/wp-content/uploads/2023/01/SFI-Science-Foundation-Ireland-Logo.png" alt="">
+								<img class="img-responsive" style="width:150px; height:50px;"
+                                     src="https://spatialdynamicslab.fra1.cdn.digitaloceanspaces.com/logos/Research_Ireland_logo.png" alt="Research Ireland Logo">
 							</div>
 						</div>
 						<div class="partner animate-box">
@@ -86,12 +93,12 @@
                                      src="https://logodix.com/logo/771750.png" alt="">
 							</div>
 						</div>
-						<div class="partner animate-box">
+						<!-- <div class="partner animate-box">
 							<div class="inner">
 								<img class="img-responsive"
                                      src="{% static 'logos/logo_fake_blank.png' %}" alt="">
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -508,6 +515,9 @@
 								<li><a href="#"><i class="icon-linkedin2"></i> LinkedIn</a></li>
 							</ul>
 						</div>
+					</div>
+					<div class="row" style="background-color: white;">
+						<img src="/static/logos/NCF Ribbon 2024.png" alt="" width="100%" height="100%">
 					</div>
 				</div>
 				<div class="fh5co-copyright text-center">
