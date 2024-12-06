@@ -4,20 +4,327 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 {% block body_class %}template-blogindexpage{% endblock %}
 {% block extra_css %}
-{#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#}
-{% include 'blog/css.html' %}
+<!-- {#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#} -->
+{% include 'home/css.html' %}
 {% endblock extra_css %}
 {% block content %}
 <!-- Wrapper -->
+
+
 <div id="wrapper">
+
+
+    <div id="fh5co-header" style=" height: 100px;" >
+        <header id="fh5co-header-section" style="background-color: #4CAF50; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+            <div class="container" style="
+                height: 100%;
+margin-right: auto;
+margin-left: auto;
+padding-left: 15px;
+padding-right: 15px;
+                ">
+                <div class="nav-header">
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
+                    ><i></i>
+                    </a>
+                    <h1 id="fh5co-logo">
+                        <a href="/">
+                            <img class="2xl:w-72 xl:w-64 lg:w-64 md:w-60 w-44 opacity-90"
+                                     src="{% static 'logos/IntervalLogo__Graphic_Circle_White.png' %}"
+                                     alt="INTERVAL logo" 
+                                     style="width: 100px; height: 100px;"/>
+                        </a>
+                    </h1>
+
+                    <!-- START #fh5co-menu-wrap -->
+                    <nav id="fh5co-menu-wrap" role="navigation">
+                        <ul class="sf-menu" id="fh5co-primary-menu">
+                            <li >
+                                <a href="/">Home</a>
+                            </li>
+                            <li><a href="/about/">About</a></li>
+                            <li class="active"><a href="/achievements/">Achievements</a></li>
+                            <li ><a href="/workshop/">Work Shops</a></li>
+                            
+                            <li><a href="/admin/">Log In</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
 <!-- Header -->
-	{% include 'pages/general/navbar.html' %}
+	<!-- {% include 'pages/general/navbar.html' %} -->
 	<!-- Menu -->
-	{% include 'pages/general/menu.html' %}
+	<!-- {% include 'pages/general/menu.html' %} -->
     <!-- Main -->
     <div id="main" class="alt">
+
+        <section id="abtbanner" style=" background-image: url(/static/images/intervalContent/achvmentPage.jpg);" >
+            <div class="inner" style="padding: 100px; background-color: #4caf4f79; ">
+                
+                <header class="major">
+                    <!-- <h1>{{ page.title }}About Us - INTERVAL Project</h1> -->
+                     <h1 style=" color: white;">Key Achievements</h1>
+                </header>
+                <div class="content">
+                   
+                </div>
+            </div>
+        </section>
+
+        <section class="treeCanopySection">
+            <div class="treeCanopyContainer">
+                <div class="heading">
+                    <h1 style="color: #4CAF50; text-align: center;">Tree Canopy Delineation & Species Prediction</h1>
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                      This example showcases the progress we have made during the seed phase of the project. Using high-resolution satellite imagery, we developed an automated AI Deep Learning model capable of segmenting individual tree crowns, delineating canopy areas, and counting the number of trees with remarkable accuracy.
+                    </p>
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                      In the top-left panel, the INTERVAL tree crown segmentation results were compared with the BlueSky commercial data product. Our developed model demonstrates superior accuracy and detailing, highlighting the significant improvement over existing commercial solutions.
+                    </p>
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                      The bottom-left panel compares our tree crown assessment with Google's tree canopy product, showcasing the reliability and accuracy of the data extracted by our model. For this task, we collaborated with Google, gaining access to their canopy data, which is currently unavailable for many European cities. Despite this, our model outperformed Google's product in identifying individual tree crowns and canopy areas.
+                    </p>
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                      The right panel presents the outcomes of our tree species classification assessment using our Deep Learning model. The model successfully classified trees into different species categories with a high level of accuracy. These outputs were verified against field-collected data to ensure reliability, usability, and the overall quality of the information produced.
+                    </p>
+                  </div>
+                  
+                <div class="flexcontent">
+                    <!-- create grid of 4 images  -->
+                    
+                    <div class="grid1">
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">INTERVAL Data </span>
+                            <img src="/static/images/intervalContent/achievements/grid1gridbox1.png" alt="">
+
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">BlueSky Data</span>
+                            <img src="/static/images/intervalContent/achievements/grid1gridbox2.png" alt="">
+                            
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">INTERVAL Canopy Data</span>
+                            <img src="/static/images/intervalContent/achievements/grid1gridbox3.png" alt="">
+                            
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">Google Canopy Data</span>
+                            <img src="/static/images/intervalContent/achievements/grid1gridbox4.png" alt="">
+                            
+                        </div>
+                    </div>
+                    <div class="grid2">
+
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">AI Model Derived Species</span>
+                            <img src="/static/images/intervalContent/achievements/grid2gridbox1.png" alt="">
+
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">Field Collected Species</span>
+                            <img src="/static/images/intervalContent/achievements/grid2gridbox2.png" alt="">
+                            
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">AI Model Derived Species</span>
+                            <img src="/static/images/intervalContent/achievements/grid2gridbox3.png" alt="">
+                            
+                        </div>
+                        <div class="gridbox">
+                            <span class="gridSpanHeading">Field Collected Species</span>
+                            <img src="/static/images/intervalContent/achievements/grid2gridbox4.png" alt="">
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="greenviewsection">
+
+         <div class="textandimage">
+                <div class="heading">
+                    <h1 style="color: #4CAF50; text-align: center;">Green View Index Evaluation</h1>
+                    <img class="greenviewimage" src="/static/images/intervalContent/achievements/greenviewachievement.png" alt="">
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                        This is another example of the work we have done during the seed phase using street view images collected from a 360 degree camera. 
+                    </p>
+                    
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                        For this work, we have collaborated with Meta/Facebook, and they have provided us with the right equipment to collect the street level information, using this tool, we have collected streetlevel images for almost all the streets of Crumlin, which accounts more than 80km and more than 30,000 images were recorded. 
+                    </p>
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                        Using the above information, we have quantified the green view index for all the public roads of Crumlin. The higher values are indicating the higher amount of green space, street trees, tree canopy along the streets, and vice versa. This type information is extremely useful for understanding the quality of street landscape, urban green infrastructure.  
+                    </p>
+                  
+                    <p style="text-align: justify; font-size: 1.5rem; line-height: 1.6;">
+                        Apart from that, we also have developed the design the prototype of our most ambitious and anticipated product - i.e. INTERVAL Digital Tree Information System. 
+                    </p>
+                  </div>
+
+
+            </div>
+           
+            <div class="utubeembed">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rLi_eIlD5SU?si=F-koBTW2KLjhjIZi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <section class="collapsible-section">
+            <div class="collapsible-container">
+              <h1 class="section-title">Maps</h1>
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Collected and Required Data</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Collected_and_Required_Data.jpg" alt="Example 1">
+                </div>
+              </div>
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> GSI map of top 10 roads</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/gsi_map_top_10_roads.jpg" alt="Example 2">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Heat Map of Tree Distribution on Public roads</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Heat_Map_of_Tree_Distribution_on_Public_Roads.jpg" alt="Example 3">
+                </div>
+              </div>
+
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Public and Private Distribution</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Public_Private_Distribution_1.jpg" alt="Example 4">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Statics for different layers</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Statics_for_different_layers.jpg" alt="Example 5">
+                </div>
+              </div>
+
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Top 10 Species</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Top_10_Species.jpg" alt="Example 6">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Tree Distribution Heat Map</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Tree_Distribution_Heat_Map.jpg" alt="Example 7">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Tree Density Map</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Tree_density_map.jpg" alt="Example 8">
+                </div>
+              </div>
+
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Tree Height Distribution Heat Map</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Tree_Height_Distribution_heat_map.jpg" alt="Example 9">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Tree Height Distribution</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Tree_Height_Distribution.jpg" alt="Example 10">
+                </div>
+              </div>
+
+              <div class="collapsible-item">
+                <button class="collapsible-header"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px; width: 16px; float:left; margin-right:4px;" viewBox="0 0 480 480" fill="#FFFFFF"><path d="M0 240a169.7 169.7 0 0 0 240 0 169.7 169.7 0 0 0-240 0ZM240 0a169.7 169.7 0 0 0 0 240 169.7 169.7 0 0 0 0-240ZM480 240a169.7 169.7 0 0 0-240 0 169.7 169.7 0 0 0 240 0ZM240 480a169.7 169.7 0 0 0 0-240 169.7 169.7 0 0 0 0 240Z"></path></svg> Tree Species</button>
+                <div class="collapsible-content">
+                  <img src="/static/images/intervalContent/datamaps/Tree_species.jpg" alt="Example 11">
+                </div>
+              </div>
+
+              <!-- Add more items as needed -->
+            </div>
+          </section>
+          
+
+
+
+
+
+
+
+
+        <section class="roadmap-section ">
+            <div class="roadmap-container">
+              <h2 class="roadmap-title">What's Next: Roadmap & Plans</h2>
+              <div class="roadmap-wrapper">
+                <!-- Step 1 -->
+                <div class="roadmap-step">
+                  <div class="step-content">
+                    <h3>1st Quarter</h3>
+                    <p>Involve more key stakeholders</p>
+                  </div>
+                  <div class="step-line"></div>
+                </div>
+                <!-- Step 2 -->
+                <div class="roadmap-step">
+                  <div class="step-content">
+                    <h3>2nd Quarter</h3>
+                    <p>Citizen Science, AI & ML Integration</p>
+                  </div>
+                  <div class="step-line"></div>
+                </div>
+                <!-- Step 3 -->
+                <div class="roadmap-step">
+                  <div class="step-content">
+                    <h3>3rd Quarter</h3>
+                    <p>Policy Integration</p>
+                    <p>Environmental and Monetary Benefit Assessment</p>
+                  </div>
+                  <div class="step-line"></div>
+                </div>
+                <!-- Step 4 -->
+                <div class="roadmap-step">
+                  <div class="step-content">
+                    <h3>4th Quarter</h3>
+                    <p>Final Deployment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+
+    
+       
         <!-- One -->
-        <section id="one">
+        <!-- <section id="one">
             <div class="inner">
                 <header class="major">
                     <h1>{{ page.title }}</h1>
@@ -43,12 +350,64 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
     </div>
 	<!-- Contact -->
-	{% include 'pages/general/contact.html' %}
+	
 	<!-- Footer -->
-	{% include 'pages/general/footer.html' %}
+	<!-- {% include 'pages/general/footer.html' %} -->
+
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                        <h3>Project Coordinator</h3>
+                        <p style="color: white">Dr. Srikanta Sannigrahi
+                        srikanta.sannigrahi@ucd.ie</p>
+                    </div>
+                    <div class="hidden md:block col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                        <h3></h3>
+                        <ul class="fh5co-social">
+                            <p style="padding-left: 100px"><img class="2xl:w-72 2xl:pt-4 xl:w-72 xl:pt-1.5 lg:w-64 lg:pt-1.5 md:w-60
+                                md:pt-1.5 w-44 pt-2 opacity-90"
+                                     src="{% static 'logos/INTERVAL_logo_simple_green_2_lg.png' %}"
+                                     alt="INTERVAL logo" /></p>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                        <h3>Follow Us</h3>
+                        <ul class="fh5co-social">
+                            <li><a href="#"><i class="icon-twitter2"></i> Twitter</a></li>
+                            <li><a href="#"><i class="icon-linkedin2"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-3 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                        <h3>Address</h3>
+                        <ul class="fh5co-social">
+                            <li><a href="#">School of Geography, Newman Building, UCD Belfield, Dublin 4, D04 F6X4</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" style="background-color: white;">
+                    <img src="/static/logos/NCF Ribbon 2024.png" alt="" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="fh5co-copyright text-center">
+                <p><small>&copy; INTERVAL a SFI National Challenge Fund project
+                    <span>Django integration by
+                        <a href="https://twitter.com/jpablogomezb" style="color: black">
+                            José P. Gomez</a> and Frontend Design by 
+                        <a href="https://www.linkedin.com/in/irtaza-arshad-784a1b194/" style="color: black">
+                            Irtaza Arshad</a></span></small></p>
+            </div>
+
+        </div>
+    </footer>
 </div>
 <!-- Scripts -->
 {% include 'blog/js.html' %}

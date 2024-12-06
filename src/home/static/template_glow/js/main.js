@@ -98,31 +98,46 @@
 
 	// Animations
 
-	var contentWayPoint = function() {
+	var contentWayPoint = function () {
 		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							el.addClass('fadeInUp animated');
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '85%' } );
+	
+		// Apply animation on scroll
+		$(".animate-box").waypoint(
+			function (direction) {
+				if (direction === "down" && !$(this.element).hasClass("animated")) {
+					i++;
+	
+					$(this.element).addClass("item-animate");
+					setTimeout(function () {
+						$("body .animate-box.item-animate").each(function (k) {
+							var el = $(this);
+	
+							// Check for custom animation classes
+							var animationClass = "";
+							if (el.hasClass("fadeInLeft")) {
+								animationClass = "fadeInLeft";
+							} else if (el.hasClass("fadeInRight")) {
+								animationClass = "fadeInRight";
+							} else {
+								animationClass = "fadeInUp"; // Default to fadeInUp
+							}
+	
+							setTimeout(
+								function () {
+									el.addClass(animationClass + " animated");
+									el.removeClass("item-animate");
+								},
+								k * 200,
+								"easeInOutExpo"
+							);
+						});
+					}, 100);
+				}
+			},
+			{ offset: "85%" }
+		);
 	};
+	
 	
 
 	// Document on load.
