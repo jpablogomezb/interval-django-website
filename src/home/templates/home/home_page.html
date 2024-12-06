@@ -10,7 +10,13 @@
 		<div id="fh5co-page">
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
-				<div class="container">
+				<div class="container" style="
+					height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+					">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
                         ><i></i>
@@ -19,7 +25,8 @@
                             <a href="/">
                                 <img class="2xl:w-72 xl:w-64 lg:w-64 md:w-60 w-44 opacity-90"
                                          src="{% static 'logos/IntervalLogo__Graphic_Circle_White.png' %}"
-                                         alt="INTERVAL logo" />
+                                         alt="INTERVAL logo" 
+										 style="width: 100px; height: 100px;"/>
                             </a>
                         </h1>
 
@@ -30,7 +37,9 @@
 									<a href="/">Home</a>
 								</li>
 								<li><a href="/about/">About</a></li>
-								<li><a href="/news/">News</a></li>
+								<li><a href="/achievements/">Achievements</a></li>
+								<li><a href="/workshop/">Work Shops</a></li>
+								
 								<li><a href="/admin/">Log In</a></li>
 							</ul>
 						</nav>
@@ -42,10 +51,10 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover text-center px-16" data-stellar-background-ratio="0.5"
+			<div class="fh5co-cover text-center " 
                  style="background-image: url(/static/images/small-road-trees.jpg);">
 				<div class="desc animate-box">
-					<h2>{{ page.header }}</h2>
+					<h2 class="fadeInUp animated">{{ page.header }}</h2>
 					<p>
 {#                        <a class="btn btn-primary btn-lg btn-learn" href="#">#}
 {#                            Learn More</a>#}
@@ -62,16 +71,16 @@
 			<div class="container">
 				<div class="partner-wrap">
 					<div class="wrap">
-						<div class="partner animate-box">
+						<!-- <div class="partner animate-box">
 							<div class="inner">
 								<img class="img-responsive"
                                      src="{% static 'logos/logo_fake_blank.png' %}" alt="">
 							</div>
-						</div>
+						</div> -->
 						<div class="partner animate-box">
 							<div class="inner">
-								<img class="img-responsive" style="width:4000px; height:100px;"
-                                     src="https://zeeko.ie/wp-content/uploads/2023/01/SFI-Science-Foundation-Ireland-Logo.png" alt="">
+								<img class="img-responsive" style="width:150px; height:50px;"
+                                     src="https://spatialdynamicslab.fra1.cdn.digitaloceanspaces.com/logos/Research_Ireland_logo.png" alt="Research Ireland Logo">
 							</div>
 						</div>
 						<div class="partner animate-box">
@@ -86,17 +95,200 @@
                                      src="https://logodix.com/logo/771750.png" alt="">
 							</div>
 						</div>
-						<div class="partner animate-box">
+						<!-- <div class="partner animate-box">
 							<div class="inner">
 								<img class="img-responsive"
                                      src="{% static 'logos/logo_fake_blank.png' %}" alt="">
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
 		</div>
+<div class="homePageBody">
 
+<div class="text-containers">
+	<div class="text-container1">
+
+		<div class="textBox">
+
+			<div class="heading">
+				<h1>
+					Project concept
+				</h1>
+
+			</div>
+			<div class="article">
+				<p>
+					INTERVAL is an Integrated street tree valuation based solution for minimising the uneven street tree distribution in cities. This research aims to develop a decision support system to increase the street tree density in Dublin City to promote climate neutrality and minimise environmental injustice that originates due to the inequality of street tree distribution.
+
+				</p>
+
+			</div>
+			<div class="text-container2">
+				<div class="heading">
+					<h1>Our Goals</h1>
+				</div>
+				<div class="goals-list">
+					<div class="goal-item">
+						<p>
+							Use high-end advanced technologies, including LiDAR and Drone, to conduct a tree density survey in different parts of the city to create a tree inventory database for Dublin and to validate the research challenge.
+						</p>
+					</div>
+					<div class="goal-item">
+						<p>
+							Engage local communities and citizens in co-creating knowledge and incorporating transdisciplinary approaches to gauge their willingness to accept and willingness to pay for improving street tree ecosystem services.
+						</p>
+					</div>
+					<div class="goal-item">
+						<p>
+							Create a prioritised list of areas that need additional street trees to maximize the advantages of enhanced tree canopy coverage.
+						</p>
+					</div>
+					<div class="goal-item">
+						<p>
+							Develop a comprehensive database of the ecosystem services provided by the most common street tree species in Dublin in order to educate the citizens and concerned stakeholders on the vital role street trees play in the city.
+						</p>
+					</div>
+					<div class="goal-item">
+						<p>
+							Collaboratively design and implement an integrated web-based platform that serves as a decision support tool for maintaining a spatial database of the street tree ecosystem services values.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="imageBox">
+			<img src="{% static 'images/intervalContent/crumlins_trees.png' %}" alt="">
+			
+		</div>
+		
+	</div>
+	
+</div>
+	
+	
+	
+</div>
+
+
+<div class="image-gallery-section">
+		<h1>Public and Private Tree Analysis</h1>
+		<p class="gallery-description">
+			This section showcases the spatial distribution and statistics of public and private trees across various layers in the city. Each visual highlights unique insights to support decision-making and promote equitable tree distribution.
+		</p>
+		<div class="image-grid">
+			<div class="image-container animate-box fadeInLeft">
+				<img src="{% static 'images/intervalContent/PublicPrivateTree/map.png' %}" alt="Public and Private Trees Map">
+				<div class="image-description">
+					<h3>Public and Private Trees</h3>
+					<p>
+						This map highlights the distribution of public and private trees within the city, showing areas with varying tree density.
+					</p>
+				</div>
+			</div>
+			<div class="image-container animate-box fadeInRight">
+				<img src="{% static 'images/intervalContent/PublicPrivateTree/map.png' %}" alt="Tree Statistics by Layers">
+				<div class="image-description">
+					<h3>Tree Statistics by Layers</h3>
+					<p>
+						A bar chart illustrating the count of public and private trees across different layers, including residential and green spaces.
+					</p>
+				</div>
+			</div>
+			<div class="image-container animate-box fadeInLeft">
+				<img src="{% static 'images/intervalContent/PublicPrivateTree/map.png' %}" alt="Tree Distribution Map">
+				<div class="image-description">
+					<h3>Tree Distribution Map</h3>
+					<p>
+						Detailed visualization of the spatial distribution of public and private trees, aiding in understanding tree coverage patterns.
+					</p>
+				</div>
+			</div>
+			<div class="image-container  animate-box fadeInRight">
+				<img src="{% static 'images/intervalContent/PublicPrivateTree/map.png' %}" alt="Layers and Trees">
+				<div class="image-description">
+					<h3>Layers with Trees</h3>
+					<p>
+						Map displaying tree distribution overlaid with different city layers, such as residential, municipal, and green spaces.
+					</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+<div class="tree-balance-section">
+    <div class="header">
+        <h2>𝐓𝐡𝐞 𝐁𝐚𝐥𝐚𝐧𝐜𝐞 𝐁𝐞𝐭𝐰𝐞𝐞𝐧 𝐏𝐮𝐛𝐥𝐢𝐜 𝐚𝐧𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐆𝐫𝐞𝐞𝐧𝐞𝐫𝐲 𝐢𝐧 𝐂𝐫𝐮𝐦𝐥𝐢𝐧, 𝐃𝐮𝐛𝐥𝐢𝐧 </h2>
+    </div>
+    <div class="content">
+        <p style="text-align: center;">
+            Our cities' landscapes are shaped by buildings, roads, and trees that line our streets and parks. Through a detailed analysis of tree distribution in Crumlin, Dublin, it's evident that there's a significant difference between the number of public and private trees.
+        </p>
+		<div class="contentColumns">
+
+		
+        <div class="key-findings">
+            <h3>𝐊𝐞𝐲 𝐅𝐢𝐧𝐝𝐢𝐧𝐠𝐬:</h3>
+            <ul>
+                <li><p><strong>𝐀 𝐭𝐨𝐭𝐚𝐥 𝐨𝐟 9,099 𝐭𝐫𝐞𝐞𝐬 𝐰𝐞𝐫𝐞 𝐦𝐚𝐩𝐩𝐞𝐝 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐬𝐭𝐮𝐝𝐲.</strong></p></li>
+                <li><p><strong>𝐏𝐮𝐛𝐥𝐢𝐜 𝐓𝐫𝐞𝐞𝐬:</strong> 3,820 </p></li>
+                <li><p><strong>𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐓𝐫𝐞𝐞𝐬:</strong> 5,279 </p></li>
+            </ul>
+            <p style="width: 70%;">
+                The visual data highlights how private spaces often outnumber public ones in terms of tree coverage. This distribution can have significant implications for urban planning, environmental quality, and community well-being.
+            <br>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" fill="#FFFFFF"><path d="M173.9 384.8c-.1-6.4-.2-12.7-.1-18.8 98.4-118.8 92.2-226.4-13.7-311 18.6 147-121.6 172.1-7.1 324.1-1.7-125.9 29.8-199.5 31.1-202.6 1.2-2.8 4.4-4 7.2-2.8 1.3.6 2.1 2.7 1.1 5.3s-32.1 76.6-29.3 206.1c.8 37.4 16 57.1 16.6 57.9a5.4 5.4 0 0 0 7.7.9 5.4 5.4 0 0 0 .9-7.7c-.1-.2-13.6-17.7-14.3-51.4Z"></path><path d="M396 382.3c-4.9-9.3-9-18.5-12.4-27.6 23.7-141.5 206.9-156.8 1.1-299.8 0 155.9-190.1 159-14.5 320.1-28.6-62.5-20.5-112.2-7.9-143.6a155.3 155.3 0 0 1 38.3-57c2.3-2 7.4-2.5 7.7.6.3 2.7-2.6 4.1-3.8 5.4-8 8.5-22.1 25.8-32.2 51.1-13.4 33.4-21.8 87.6 13.9 155.9a158.6 158.6 0 0 1 18.1 52.6c.2 2.8 2.6 5 5.4 5s5.7-2.8 5.5-5.9c0-1-2.3-24.3-19.3-56.7Z"></path><path d="M597.2 351.7C612.4 212.9 717.6 195.6 599 55c-19 123.4-201.8 74-17.1 312.7-22.3-54-37.4-118.7-22.6-150.1a5.5 5.5 0 0 1 7.3-2.6c1.8.9 2.5 3 1.8 4.8-14.8 36.2 6 111.6 32.2 167.4 15.2 32.5 29.1 55 29.2 55.2 1.6 2.6 5 3.4 7.5 1.8 2.6-1.6 3.4-5 1.8-7.5a586.3 586.3 0 0 1-41.8-85Z"></path><path d="M770.6 55c49.8 110-210.3 181.1-9.1 325.3-15.5-83.7 2.9-137.2 21.5-167.5 15-24.6 35.2-41.9 46.8-47.5 2.9-1.4 5.2 2.8 2.6 4.6a144 144 0 0 0-39.4 42.9c-18.9 31-37.8 86.2-20.4 173.1 6.7 33.4 2.2 52.1 2.2 52.2a5.4 5.4 0 0 0 5.3 6.8c2.4 0 4.7-1.6 5.3-4.1.2-.8 5.2-21-2-57.1l-1.5-7.7c167.9-109.5 129.3-244.9-11.2-321.1Z"></path></svg>
+			</p>
+			
+        </div>
+        <div class="why-it-matters">
+            <h3>𝐖𝐡𝐲 𝐈𝐭 𝐌𝐚𝐭𝐭𝐞𝐫𝐬:</h3>
+            <ul>
+                <li><p><strong>𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐓𝐫𝐞𝐞 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭:</strong> Enables targeted care and maintenance, ensuring healthy urban forests. </p></li>
+                <li><p><strong>𝐂𝐨𝐮𝐧𝐜𝐢𝐥 𝐒𝐮𝐩𝐩𝐨𝐫𝐭:</strong> Facilitates councils in providing resources and incentives for private tree upkeep. </p></li>
+                <li><p><strong>𝐒𝐩𝐞𝐜𝐢𝐞𝐬 𝐃𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐲:</strong> Assesses tree species balance, promoting a resilient and diverse urban forest. </p></li>
+                <li><p><strong>𝐄𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭𝐚𝐥 𝐁𝐞𝐧𝐞𝐟𝐢𝐭𝐬:</strong> Captures the full ecological impact of both private and public trees. </p></li>
+                <li><p><strong>𝐄𝐔 𝐋𝐚𝐰 𝐂𝐨𝐦𝐩𝐥𝐢𝐚𝐧𝐜𝐞:</strong> Ensures adherence to the EU Nature Restoration Law by tracking total canopy cover and increase by 5% by 2050. </p></li>
+                <li><p><strong>𝐈𝐧𝐬𝐮𝐫𝐚𝐧𝐜𝐞 𝐋𝐢𝐧𝐤:</strong> Addresses risks associated with mature private trees, aiding in safer urban planning. </p></li>
+                <li><p><strong>𝐓𝐫𝐞𝐞 𝐈𝐧𝐯𝐞𝐧𝐭𝐨𝐫𝐲:</strong> Complements public inventories with private data, creating a comprehensive urban tree database. </p></li>
+                <li><p><strong>𝐓𝐫𝐞𝐞 𝐄𝐪𝐮𝐢𝐭𝐲 𝐚𝐧𝐝 𝐄𝐧𝐠𝐚𝐠𝐞𝐦𝐞𝐧𝐭:</strong> Targets greening efforts where needed most, fostering community participation and fairness.</p></li>
+            </ul>
+        </div>
+	</div>
+    </div>
+</div>
+
+	
+<div class="two-section-container">
+    <!-- Section 1 -->
+    <div class="section-one">
+        <div class="content">
+            <h2>🌳 Explore Our Tree Collection Platform 🌳</h2>
+            <p>
+                Join us in building a greener future. Contribute to our tree inventory by exploring our platform and adding valuable data to help us promote sustainable urban planning.
+            </p>
+            <a href="https://interval.cartospot.com/" target="_blank" class="cta-button">Visit Platform</a>
+        </div>
+    </div>
+    
+    <!-- Section 2 -->
+    <div class="section-two">
+        <iframe 
+			src="https://www.youtube.com/embed/ae-jQJkncsE?si=RX4kPJ3pDCjsPZdW"
+            title="YouTube video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ae-jQJkncsE?si=RX4kPJ3pDCjsPZdW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+<!-- 
         <div id="fh5co-work">
 
             <div class="container">
@@ -238,22 +430,23 @@
 								</div>
 							</div>
 							<div class="col-md-6 col-md-pull-6 animate-box">
-								<div class="desc text-center text-bold">
-									{% if page.section_1_call_to_action %}
-                                        <p>
-                                            <a class="btn btn-primary"
-                                               href="{{ page.section_1_call_to_action_path }}">
-                                                {{ page.section_1_call_to_action }}
-                                            </a>
-                                        </p>
-                                    {% endif %}
-								</div>
+								
 							</div>
 
 
 
 
 						</div>
+					</div>
+					<div class="desc text-center text-bold">
+						{% if page.section_1_call_to_action %}
+							<p>
+								<a class="btn btn-primary"
+								   href="{{ page.section_1_call_to_action_path }}">
+									{{ page.section_1_call_to_action }}
+								</a>
+							</p>
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -302,8 +495,8 @@
 {#				</div>#}
 {#			</div>#}
 
-		</div>
-
+		</div> -->
+<!-- 
 {#		<div id="fh5co-services-section">#}
 {#			<div class="container">#}
 {#				<div class="row">#}
@@ -359,11 +552,11 @@
 {#					</div>#}
 {#				</div>#}
 {#			</div>#}
-{#		</div>#}
+{#		</div>#} -->
 
 		<!-- END What we do -->
 
-{#		<div id="fh5co-content-section" class="fh5co-section-gray">#}
+<!-- {#		<div id="fh5co-content-section" class="fh5co-section-gray">#}
 {#			<div class="container">#}
 {#				<div class="row">#}
 {#					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">#}
@@ -409,10 +602,10 @@
 {#					</div>#}
 {#				</div>#}
 {#			</div>#}
-{#		</div>#}
+{#		</div>#} -->
 		<!-- fh5co-content-section -->
 
-    {% if page.tiles_call_to_action %}
+    <!-- {% if page.tiles_call_to_action %}
 		<div id="fh5co-blog-section">
 			<div class="container">
 				<div class="row">
@@ -479,7 +672,7 @@
 {##}
 {#			</div>#}
 		</div>
-        {% endif %}
+        {% endif %} -->
 		<!-- fh5co-blog-section -->
 		<footer>
 			<div id="footer">
@@ -508,15 +701,26 @@
 								<li><a href="#"><i class="icon-linkedin2"></i> LinkedIn</a></li>
 							</ul>
 						</div>
+						<div class="col-md-3 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+							<h3>Address</h3>
+							<ul class="fh5co-social">
+								<li><a href="#">School of Geography, Newman Building, UCD Belfield, Dublin 4, D04 F6X4</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="row" style="background-color: white;">
+						<img src="/static/logos/NCF Ribbon 2024.png" alt="" width="100%" height="100%">
 					</div>
 				</div>
+				
 				<div class="fh5co-copyright text-center">
 					<p><small>&copy; INTERVAL a SFI National Challenge Fund project
-                        <span>Django integration by
-                            <a href="https://twitter.com/jpablogomezb" style="color: black">
-                                José P. Gomez</a> based on a
-                            <a href="http://freehtml5.co/" style="color: black">
-                                FreeHTML5.co</a> design.</span></small></p>
+						<span>Django integration by
+							<a href="https://twitter.com/jpablogomezb" style="color: black">
+								José P. Gomez</a> and Frontend Design by 
+							<a href="https://www.linkedin.com/in/irtaza-arshad-784a1b194/" style="color: black">
+								Irtaza Arshad</a></span></small></p>
 				</div>
 
 			</div>

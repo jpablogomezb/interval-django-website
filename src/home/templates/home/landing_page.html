@@ -2,90 +2,190 @@
 {% load static %}
 <!-- Load the wagtailimages_tags: -->
 {% load wagtailcore_tags wagtailimages_tags %}
-{% block body_class %}template-blogpage{% endblock %}
+{% block body_class %}template-homepage{% endblock %}
 {% block extra_css %}
-{#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#}
-{% include 'blog/css.html' %}
+<!-- {#<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">#} -->
+
+{% include 'home/css.html' %}
 {% endblock extra_css %}
 {% block content %}
 <!-- Wrapper -->
+<div class="fh5co-wrapper" style="overflow-x: hidden;">
+    <div id="fh5co-page">
+<div id="fh5co-header" style=" height: 100px;" >
+    <header id="fh5co-header-section" style="background-color: #4CAF50; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container" style="
+            height: 100%;
+margin-right: auto;
+margin-left: auto;
+padding-left: 15px;
+padding-right: 15px;
+            ">
+            <div class="nav-header">
+                <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
+                ><i></i>
+                </a>
+                <h1 id="fh5co-logo">
+                    <a href="/">
+                        <img class="2xl:w-72 xl:w-64 lg:w-64 md:w-60 w-44 opacity-90"
+                                 src="{% static 'logos/IntervalLogo__Graphic_Circle_White.png' %}"
+                                 alt="INTERVAL logo" 
+                                 style="width: 100px; height: 100px;"/>
+                    </a>
+                </h1>
+
+                <!-- START #fh5co-menu-wrap -->
+                <nav id="fh5co-menu-wrap" role="navigation">
+                    <ul class="sf-menu" id="fh5co-primary-menu">
+                        <li >
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="active" ><a href="/about/">About</a></li>
+                        <li><a href="/achievements/">Achievements</a></li>
+                        <li ><a href="/workshop/">Work Shops</a></li>
+                        
+                        <li><a href="/admin/">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>
 <div id="wrapper">
 <!-- Header -->
-	{% include 'pages/general/navbar.html' %}
+	
+
 	<!-- Menu -->
-	{% include 'pages/general/menu.html' %}
+	
+    
     <!-- Main -->
     <!-- Banner -->
     <!-- Note: The "styleN" class below should match that of the header element. -->
-        <section id="banner" class="style2" style="height: 50%;">
-            <div class="inner">
-                <span class="image">
-                    <img src="{% static '/images/stephens-green.jpg' %}"
-                         alt="Stephen's green" />
-                </span>
+        <section id="abtbanner"  >
+            <div class="inner" style="padding: 100px; background-color: #4caf4f79; ">
+                
                 <header class="major">
-                    <h1>{{ page.title }}</h1>
+                    <!-- <h1>{{ page.title }}About Us - INTERVAL Project</h1> -->
+                     <h1 style=" color: white;">INTERVAL Project</h1>
                 </header>
                 <div class="content">
-                    <h4>
-                        {{ page.subtitle }}
-                    </h4>
+                    <p >
+
+                        The INTERVAL Project is dedicated to enhancing urban forestry and environmental sustainability by leveraging advanced technologies like AI and remote sensing while fostering community engagement. It addresses key challenges such as uneven tree distribution, insufficient knowledge, and poor management through the INTERVAL Tree Information System Platform. This innovative platform integrates real-time data, citizen science, and collaboration with local communities and authorities to drive better decision-making, raise awareness, and promote shared responsibility for green spaces. By bridging gaps in data and accessibility, INTERVAL aims to create healthier, more sustainable urban environments and inspire collective action for a greener future.
+
+
+
+                       <!-- {{ page.subtitle }} -->
+                    </p>
                 </div>
             </div>
         </section>
+
+     
+       
+
         <section id="two" class="spotlights">
-            <section>
-                <a href="generic.html" class="image fit">
-                    <img src="{% static '/images/urban-trees-1.jpg' %}" alt="Urban trees"
+            <section class="abtussection1" >
+                <a href="#" class="image fit animate-box fadeInLeft">
+                    <img src="{% static '/images/intervalContent/challenges.png' %}" alt="Urban trees"
                          data-position="center center" />
                 </a>
-                <div class="content">
+                <div class="content animate-box fadeInRight">
                     <div class="inner">
                         <header class="major">
-                            <h2>{{ page.section_1_title }}</h2>
+                            <h1>Key Challenges</h1>
+                            <!-- <h2>{{ page.section_1_title }}</h2> -->
                         </header>
-                        {{ page.section_1_desc|richtext }}
-                        {% if page.section_1_call_to_action %}
-                         <ul class="actions">
+                        <ul class="actions">
                             <li>
+                                <p><strong>Lack of Tree Information:</strong> There is insufficient data or accessible knowledge about existing trees, their health, and locations, which limits effective planning and decision-making.</p>
+                            </li>
+                            <li>
+                                <p><strong>Uneven Tree Distribution:</strong>Trees are not evenly distributed across urban areas, leading to disparities in environmental benefits and aesthetics.</p>
+                            </li>
+                            <li>
+                                <p><strong>Improper Tree Management:</strong>Maintenance and care of trees are inadequate, resulting in poor health and reduced effectiveness in providing environmental benefits.</p>
+                            </li>
+                            <li>
+                                <p><strong>Lack of Communication:</strong> Collaboration and information-sharing among stakeholders, such as local communities, organizations, and authorities, are limited, hindering coordinated efforts for tree conservation. </p>
+                            </li>
+                            <li>
+                                <p><strong>Lack of Knowledge on Tree Benefits:</strong>Awareness of the ecological, social, and economic benefits provided by trees is low, reducing motivation for conservation and planting efforts. </p>
+                            </li>
+                            <li>
+                                <p><strong>Lack of Accessibility:</strong> Physical or systemic barriers prevent people from interacting with trees and green spaces, reducing community engagement with nature.</p>
+                            </li>
+                            <!-- <li>
                                 <a href="{{ page.section_1_call_to_action_path }}"
                                    class="button small next">
                                     {{ page.section_1_call_to_action }}
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
-                        {% endif %}
+                        <!-- {{ page.section_1_desc|richtext }}
+                        {% if page.section_1_call_to_action %} -->
+                       
+                        <!-- {% endif %} -->
                     </div>
                 </div>
             </section>
-            <section>
-                <a href="generic.html" class="image fit">
-                    <img src="{% static '/images/urban-trees.jpg' %}" alt="Urban trees"
+            <section class="abtussection2">
+                <a href="#" id="hidimage" class="image fit animate-box fadeInLeft">
+                    <img src="{% static '/images/intervalContent/solutionsframework.png' %}" alt="Urban trees"
                          data-position="top center" />
                 </a>
-                <div class="content">
+               
+                <div class="content animate-box fadeInRight">
                     <div class="inner">
                         <header class="major">
-                            <h2>{{ page.section_2_title }}</h2>
+                            <h1>Solution Framework</h1>
                         </header>
-                        {{ page.section_2_desc|richtext }}
-                        {% if page.section_2_call_to_action %}
                         <ul class="actions">
                             <li>
-                                <a href="{{ page.section_2_call_to_action_path }}"
+
+                                <li>
+                                    <p><strong>Remote Sensing & Earth Observation:</strong> Leveraging advanced technologies such as satellite imagery and drones to collect data on tree health, distribution, and environmental impact.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Google Street View and Mapillary Data: </strong> Utilizing visual data from platforms like Google Street View and Mapillary for mapping and monitoring urban trees and vegetation.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Citizen Science Apps and Platforms:</strong> Engaging the public through mobile applications and online platforms to crowdsource data collection and encourage community participation in environmental conservation efforts. </p>
+                                </li>
+
+                                <li>
+                                    <p><strong>Local Communities:</strong> Involving community members to raise awareness, participate in conservation efforts, and provide localized knowledge for better decision-making.</p>
+                                </li>
+
+                                <li>
+                                    <p><strong>Relevant Authorities:</strong>Collaborating with governmental and non-governmental organizations responsible for urban planning, forestry management, and environmental policies.</p>
+                                </li>
+
+                                <li>
+                                    <p><strong>Societal Champions:</strong> Partnering with individuals or groups passionate about environmental advocacy to lead initiatives and inspire broader community engagement.</p>
+                                </li>
+                                <!-- <a href="{{ page.section_2_call_to_action_path }}"
                                    class="button primary small next">
                                     {{ page.section_2_call_to_action }}
-                                </a>
+                                </a> -->
                             </li>
                         </ul>
-                        {% endif %}
+
+                       
+               
+                       
                     </div>
                 </div>
+
+                <a href="#" class="image fit animate-box fadeInLeft">
+                    <img src="{% static '/images/intervalContent/solutionsframework.png' %}" alt="Urban trees"
+                         data-position="top center" />
+                </a>
             </section>
         </section>
 
 <!-- Contact -->
-<section id="contact" class="mt-10">
+<!-- <section id="contact" class="mt-10">
     <div class="inner">
             <section>
                 <section>
@@ -102,25 +202,26 @@
                     <div class="contact-method">
                         <span class="icon solid alt fa-home"></span>
                         <h3>Address</h3>
-                        <span>Spatial Dynamics Lab,<br />
-                            UCD Richview Campus,<br />
-                            D04 V1W8, Belfield, Dublin</span>
+                          
+                        <span>UCD School of Geography,<br />
+                            Newman Building, UCD Belfield,<br />
+                            Dublin 4, D04 F6X4</span>
                     </div>
                 </section>
             </section>
 		</div>
-</section>
+</section> -->
 {#<!-- Logos -->#}
-{#<section class="bg-white"#}
+<!-- {#<section class="bg-white"#}
 {#         style="border-bottom: solid 1px rgba(212, 212, 255, 0.1)">#}
 {#    <div class="p-16 px-6 grid grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">#}
 {#        <img class="max-h-20 w-full mt-12 object-contain md:col-span-1" src="https://logodix.com/logo/771750.png" alt="UCD">#}
 {#        <img class="max-h-32 w-full object-contain md:col-span-1 align-center text-center" src="{% static 'logos/INTERVAL_logo_v2_white.png' %}" alt="INTERVAL">#}
 {#        <img class="max-h-20 w-full mt-10 object-contain md:col-span-1" src="https://www.sfi.ie/site-files/cms-templates/img/sfi-logo.svg" alt="SFI">#}
 {#    </div>#}
-{#</section>#}
+{#</section>#} -->
 <!-- Footer -->
-{#<footer id="footer" class="bg-white">#}
+<!-- {#<footer id="footer" class="bg-white">#}
 {#    <div class="inner">#}
 {#        <ul class="icons">#}
 {#            <li>#}
@@ -140,8 +241,64 @@
 {#                based on a <a href="https://html5up.net">HTML5 UP</a> design</li>#}
 {#        </ul>#}
 {#    </div>#}
-{#</footer>#}
+{#</footer>#} -->
 </div>
 <!-- Scripts -->
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                    <h3>Project Coordinator</h3>
+                    <p style="color: white">Dr. Srikanta Sannigrahi
+                    srikanta.sannigrahi@ucd.ie</p>
+                </div>
+                <div class="hidden md:block col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                    <h3></h3>
+                    <ul class="fh5co-social">
+                        <p style="padding-left: 100px"><img class="2xl:w-72 2xl:pt-4 xl:w-72 xl:pt-1.5 lg:w-64 lg:pt-1.5 md:w-60
+                            md:pt-1.5 w-44 pt-2 opacity-90"
+                                 src="{% static 'logos/INTERVAL_logo_simple_green_2_lg.png' %}"
+                                 alt="INTERVAL logo" /></p>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                    <h3>Follow Us</h3>
+                    <ul class="fh5co-social">
+                        <li><a href="#"><i class="icon-twitter2"></i> Twitter</a></li>
+                        <li><a href="#"><i class="icon-linkedin2"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                    <h3>Address</h3>
+                    <ul class="fh5co-social">
+                        <li><a href="#">School of Geography, Newman Building, UCD Belfield, Dublin 4, D04 F6X4</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row" style="background-color: white;">
+                <img src="/static/logos/NCF Ribbon 2024.png" alt="" width="100%" height="100%">
+            </div>
+        </div>
+        
+        <div class="fh5co-copyright text-center">
+            <p><small>&copy; INTERVAL a SFI National Challenge Fund project
+                <span>Django integration by
+                    <a href="https://twitter.com/jpablogomezb" style="color: black">
+                        José P. Gomez</a> and Frontend Design by 
+                    <a href="https://www.linkedin.com/in/irtaza-arshad-784a1b194/" style="color: black">
+                        Irtaza Arshad</a></span></small></p>
+        </div>
+
+    </div>
+</footer>
+
+
+</div>
+</div>
 {% include 'blog/js.html' %}
+{% include 'home/js.html' %}
 {% endblock content %}

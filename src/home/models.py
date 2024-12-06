@@ -3,6 +3,9 @@ from django.db import models
 from wagtail.models import Page
 from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
+from wagtail.admin.panels import FieldPanel, MultiFieldPanel
+from wagtail.images.models import Image
+
 
 
 class HomePage(Page):
@@ -67,4 +70,44 @@ class LandingPage(Page):
         FieldPanel('section_2_desc'),
         FieldPanel('section_2_call_to_action'),
         FieldPanel('section_2_call_to_action_path'),
+    ]
+
+
+
+class WorkshopPage(Page):
+    # Section 1: Workshop Overview
+    desc = models.CharField(max_length=250, blank=True, null=True, help_text="Short description or tagline for the workshop.")
+    description = RichTextField(blank=True, null=True, help_text="Detailed description of the workshop.")
+
+    # Section 2: Highlights of the Workshop
+    highlight_title = models.CharField(max_length=150, blank=True, null=True, help_text="Title for the highlights section.")
+    highlight_images = models.ManyToManyField(
+        Image,
+        blank=True,
+        help_text="Upload multiple images to create a collage for the highlights.",
+    )
+
+    # Section 3: Key Takeaways
+    takeaways_title = models.CharField(max_length=150, blank=True, null=True, help_text="Title for the key takeaways section.")
+    takeaways = RichTextField(blank=True, null=True, help_text="Key points or takeaways from the workshop.")
+
+    # Section 4: Feedback or Testimonials
+    feedback_title = models.CharField(max_length=150, blank=True, null=True, help_text="Title for the feedback section.")
+    feedback = RichTextField(blank=True, null=True, help_text="Add feedback or testimonials from workshop participants.")
+
+    content_panels = Page.content_panels + [
+        FieldPanel('desc'),
+        FieldPanel('description'),
+        MultiFieldPanel([
+            FieldPanel('highlight_title'),
+            FieldPanel('highlight_images'),
+        ], heading="Workshop Highlights"),
+        MultiFieldPanel([
+            FieldPanel('takeaways_title'),
+            FieldPanel('takeaways'),
+        ], heading="Key Takeaways"),
+        MultiFieldPanel([
+            FieldPanel('feedback_title'),
+            FieldPanel('feedback'),
+        ], heading="Feedback and Testimonials"),
     ]
